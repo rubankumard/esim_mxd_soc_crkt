@@ -171,11 +171,15 @@ Resultant waveform of Signal Generation
 
 Resultant waveform of CMOS Buffer:
 ![bstbout](Images/buff_out.jpg)
+
 Resultant waveforms of MOD-16 counter:
 
 ![bstbout](Images/c0.jpg)
+
 ![bstbout](Images/c1.jpg)
+
 ![bstbout](Images/c2.jpg)
+
 ![bstbout](Images/c3.jpg)
 
 Resultant waveform of Final Output from Multiplexer:
