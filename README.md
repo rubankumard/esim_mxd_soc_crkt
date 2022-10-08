@@ -104,21 +104,9 @@ Sine  wave  is  generated  passed  to  cmos  buffer to generate signals. A buffe
 
 ## 📋 Schematics
 
-Schematic 
+The Schematic: 
 
-![bssch](Images/sch.png)
-
-Schematic designed for signal genaration
-
-![bssch](Images/sig.png)
-
-Schematic designed for  4x1 mux and AND gate 
-
-![bssch](Images/s1.png)
-
-Schematic designed for  Adder/Subractor
-
-![bssch](Images/s2.png)
+![bssch](Images/Schematic.jpg)
 
 Skymode block
 
@@ -179,18 +167,20 @@ endmodule
 
 Resultant waveform of Signal Generation
 
-![bstbout](Images/out1.png)
+![bstbout](Images/vin.jpg)
 
-Resultant waveform of Adder/Subractor
+Resultant waveform of CMOS Buffer:
+![bstbout](Images/buff_out.jpg)
+Resultant waveforms of MOD-16 counter:
 
-![bstbout](Images/out2.png)
+![bstbout](Images/c0.jpg)
+![bstbout](Images/c1.jpg)
+![bstbout](Images/c2.jpg)
+![bstbout](Images/c3.jpg)
 
-Resultant waveform of Cmos Buffer Along With Multiplexer with Adder/Subtractor for Signal Shaping Operation
+Resultant waveform of Final Output from Multiplexer:
+![bstbout](Images/vout.jpg)
 
-![bstbout](Images/out3.png)
-
-
-![bstbout](Images/out4.png)
 
 
 </br>
