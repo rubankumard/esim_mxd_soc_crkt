@@ -1,17 +1,16 @@
-# esim_mxd_soc_crkt
 </br>
 
-# Implementation of Cmos Buffer Along With Multiplexer with Adder/Subtractor for Signal Shaping Operation
-</br>
-
-
-
+# Implementation of Cmos Buffer Along With Mod-16 Counter for Counting Based Data Line Selection Operation
 </br>
 
 
 
+</br>
 
-This repository gives a detailed report on the design of a Implementation of Cmos Buffer Along With Multiplexer with Adder/Subtractor for Signal Shaping Operation using open-source EDA tools and skywater130nm PDK . The simulation being carried out is in mixed-mode (i.e.) both analog and digital simulation. Later the obtained simulation, is verified for it's correctness and functionality.
+
+
+
+This repository gives a detailed report on the design of a Implementation of Cmos Buffer Along With Mod-16 Counter for Counting Based Data Line Selection Operation using open-source EDA tools and skywater130nm PDK . The simulation being carried out is in mixed-mode (i.e.) both analog and digital simulation. Later the obtained simulation, is verified for it's correctness and functionality.
 
  
 <br>
@@ -19,7 +18,7 @@ This repository gives a detailed report on the design of a Implementation of Cmo
 #  Table of Contents
 
 * [Introduction](#-Introduction) 
-* [Cmos Buffer Along With Multiplexer with Adder/Subtractor for Signal Shaping Operation](#-Cmos-Buffer-Along-With-Multiplexer-with-Adder/Subtractor-for-Signal-Shaping-Operation)
+* [Implementation of Cmos Buffer Along With Mod-16 Counter for Counting Based Data Line Selection Operation](#-Cmos-Buffer-Along-With-Multiplexer-with-Adder/Subtractor-for-Signal-Shaping-Operation)
 * [Software Tools Used](#-Software-Tools-Used) 
 * [Implemented Circuit Design using eSim](#-Implemented-Circuit-Design-using-eSim) 
     * [Schematics](#-Schematics) 
@@ -35,7 +34,7 @@ This repository gives a detailed report on the design of a Implementation of Cmo
 
 # 📝 Introduction
 
- An  sine  wave  generator  along  with cmos  buffer  is  used  to  generate  signals.  Output  is  fed  to  4x1 multiplexer. An Adder/subtractor circuit is design to give either sum  and  carry  or  borrow  and  difference  to  input  signals  for mux. The output of mux signal is AND-ed with input signal for modifing  signal  according  to  mux  output.
+ An  sine  wave  generator  along  with cmos  buffer  is  used  to  generate  signals. The output from the cmos buffer is fed to a Mod-16 counter. The counter counts from 0 to 15 and resets once the count increases to 16. the four bit output from the Mod-16 counter is fed into a 16x1 Mux, and the data fed to the Mux are selected sequencially from first to last and this process is repeated until the input sine wave is stopped.
 
  
  </br>
@@ -44,11 +43,10 @@ This repository gives a detailed report on the design of a Implementation of Cmo
 
 </br>
 
-# 📝 Cmos Buffer Along With Multiplexer with  Adder/Subtractor for Signal Shaping Operation
+# 📝 Implementation of Cmos Buffer Along With Mod-16 Counter for Counting Based Data Line Selection Operation
 
 
-Sine  wave  is  generated  passed  to  cmos  buffer  to  generate signals. Half  Adder  is  the  adder  that  adds  two  inputs  and produces  two  outputs.  The  first  2  inputs  are  A  and  B  . The  output  carry is designated  as C-OUT and  the normal output  is designated as  S  which  is  SUM.  A  Half  subtractor  is  a  combinational circuit  that  performs  subtraction  of  2  bits,  one  is  minuend and  other  is  subtrahend,  This  circuit  has  two  inputs  and two  outputs.  The  two  inputs  A,  B  denote  the minuend and  subtrahend   respectively. The   two   outputs,   D   and   Bout   represent   the   difference and  output  borrow,  respectively.  This  output  is  fed  to  4x1Multiplexer.   Multiplexer   is   a   combinational   circuit   which has  maximum  of  2n  data  inputs,  ‘n’  selection  lines  and single  output  line.  Among  these  data  inputs  only  one  will be  connected  to  the  output  based  on  the  select  line  values. So,  a  4x1  mux  have  4  data  input  lines,  2  select  lines  and one  output  line.  So,  based  on  the  output  of  input  signals  the corresponding  data  line  is  connected  to  the  output  line.  This mux output is AND-ed with input signal. So based on select line  either  sum/difference  or  carry/borrow  or  remaining  data lines  will  be  AND-ed  with  input  signal  to  produce  desired output.
-
+Sine  wave  is  generated  passed  to  cmos  buffer to generate signals. A buffer is a circuit that is used tp provide current gain but no voltage gain. The output of the buffer can provide more current, without changing the output voltage. The output is fed to the Mod-16 counter. A Mod-16 counter is a simple counter like any other normal counter except for that the count resets each time when the count reaches 16. The output of the Mod-16 counter is a four bit binary representation of the count value. This output is fed to a 16x1 multiplexer. Multiplexer is a combinational circuit which has maximum of 2n data inputs, ‘n’ selection lines and single output line. Among these data inputs only one will be connected to the output based on the select line values. So, a 16x1 mux have 16 data input lines, 4 select lines and one output line. So, based on the output of input signals the corresponding data line is connected to the output line. So when the input sine wave is fed, with the modified signal from the CMOS buffer the counter counts from 0 to 15 repeatedly and hence the data in the datalines are seqenctially made available in the output of the Multiplexer for the Time period (of the input sine wave). This circuit can be used for the sequential access of the data periodically.
 
 # Software Tools Used
 
@@ -298,7 +296,7 @@ plot v(mux_out) v(f1)+12 v(out)+20
 
 # Author
  
- 🖊️ Srithika S, Second year student, B.E. ECE, Madras Institute of Technology, Anna University, Chennai, India
+ 🖊️ Rubankumar D, Second year student, B.E. ECE, Madras Institute of Technology, Anna University, Chennai, India
  
  
 #  Acknowledgements
