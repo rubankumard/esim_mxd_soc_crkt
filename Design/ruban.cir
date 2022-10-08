@@ -1,0 +1,35 @@
+* /home/nalinnet36/snk/ruban/ruban.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: Fri 07 Oct 2022 10:32:12 PM IST
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+SC2  Net-_SC1-Pad1_ vin GND GND sky130_fd_pr__nfet_01v8		
+SC1  Net-_SC1-Pad1_ vin Net-_SC1-Pad3_ Net-_SC1-Pad3_ sky130_fd_pr__pfet_01v8		
+SC3  buf_out Net-_SC1-Pad1_ Net-_SC1-Pad3_ Net-_SC1-Pad3_ sky130_fd_pr__pfet_01v8		
+SC4  buf_out Net-_SC1-Pad1_ GND GND sky130_fd_pr__nfet_01v8		
+v1  vin GND sine		
+v2  mux1 GND sine		
+v4  mux2 GND sine		
+v5  mux3 GND pulse		
+v6  mux4 GND DC		
+v3  Net-_U2-Pad2_ GND pulse		
+U2  buf_out Net-_U2-Pad2_ Net-_U1-Pad1_ Net-_U1-Pad2_ adc_bridge_2		
+U5  mux4 mux2 mux1 mux3 mux3 mux3 mux2 GND Net-_U3-Pad9_ Net-_U3-Pad10_ Net-_U3-Pad11_ Net-_U3-Pad12_ Net-_U3-Pad13_ Net-_U3-Pad14_ Net-_U3-Pad15_ Net-_U3-Pad16_ adc_bridge_8		
+U4  mux1 GND mux2 mux1 mux2 mux1 mux4 GND Net-_U3-Pad1_ Net-_U3-Pad2_ Net-_U3-Pad3_ Net-_U3-Pad4_ Net-_U3-Pad5_ Net-_U3-Pad6_ Net-_U3-Pad7_ Net-_U3-Pad8_ adc_bridge_8		
+scmode1  SKY130mode		
+U7  out plot_v1		
+U6  Net-_U3-Pad21_ out dac_bridge_1		
+v7  Net-_SC1-Pad3_ GND DC		
+U3  Net-_U3-Pad1_ Net-_U3-Pad2_ Net-_U3-Pad3_ Net-_U3-Pad4_ Net-_U3-Pad5_ Net-_U3-Pad6_ Net-_U3-Pad7_ Net-_U3-Pad8_ Net-_U3-Pad9_ Net-_U3-Pad10_ Net-_U3-Pad11_ Net-_U3-Pad12_ Net-_U3-Pad13_ Net-_U3-Pad14_ Net-_U3-Pad15_ Net-_U3-Pad16_ c3 c2 c1 co Net-_U3-Pad21_ ruban_mux		
+U1  Net-_U1-Pad1_ Net-_U1-Pad2_ c3 c2 c1 co ruban_counter		
+U8  vin plot_v1		
+U9  buf_out plot_v1		
+U10  c3 plot_v1		
+U13  co plot_v1		
+U11  c2 plot_v1		
+U12  c1 plot_v1		
+
+.end
