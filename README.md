@@ -174,13 +174,13 @@ Resultant waveform of CMOS Buffer:
 
 Resultant waveforms of MOD-16 counter:
 
-![bstbout](Images/c0.jpg)
+![bstbout](Images/C0.jpg)
 
-![bstbout](Images/c1.jpg)
+![bstbout](Images/C1.jpg)
 
-![bstbout](Images/c2.jpg)
+![bstbout](Images/C2.jpg)
 
-![bstbout](Images/c3.jpg)
+![bstbout](Images/C3.jpg)
 
 Resultant waveform of Final Output from Multiplexer:
 ![bstbout](Images/vout.jpg)
